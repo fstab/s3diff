@@ -59,7 +59,7 @@ objectCollection.each() do |object|
   etag = object.etag.delete('"')
   local_md5 = Digest::MD5.file(local_file).hexdigest
   if local_md5 != etag then
-    puts object.key + ": Checksum on local disc differs from checksum on S3."
+    puts object.key + ": Checksum on local disk differs from checksum on S3."
   end
 end
 
